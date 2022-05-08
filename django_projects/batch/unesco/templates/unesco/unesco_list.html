@@ -1,0 +1,28 @@
+{% extends "base_bootstrap.html" %}
+
+{% block content %}
+  <h1>Unesco Site List</h1>
+  {% if site_list %}
+  <ul>
+    {% for site in site_list %}
+      <li>
+          {{ site.name }} ({{ site.year }})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no sites in the library.</p>
+  {% endif %}
+
+ <h1>Region List</h1>
+  {% if region_list %}
+  <ul>
+    {% for region in region_list %}
+    <li>
+      {{ region.name }}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+{% endblock %}

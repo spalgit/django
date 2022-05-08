@@ -1,0 +1,29 @@
+{% extends "base_bootstrap.html" %}
+
+{% block content %}
+ <h1>Region</h1>
+ <ul>
+    <li>
+      {{ region.name }}
+    </li>
+  </ul>
+  <h1>Category</h1>
+  <ul>
+     <li>
+       {{ category.name }}
+     </li>
+   </ul>
+   <h1>States</h1>
+   <ul>
+      <li>
+        {{ states.name }}
+      </li>
+    </ul>
+    <h1>Iso</h1>
+    <ul>
+       <li>
+         {{ iso.name }}
+       </li>
+     </ul>
+  <a href="{% url 'unesco_more:all' %}">Back</a>
+{% endblock %}

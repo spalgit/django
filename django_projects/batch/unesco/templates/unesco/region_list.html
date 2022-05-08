@@ -1,0 +1,16 @@
+{% extends "base_bootstrap.html" %}
+
+{% block content %}
+ <h1>Region List</h1>
+  {% if region_list %}
+  <ul>
+    {% for region in region_list %}
+    <li>
+      {{ region.name }}
+      <a href="{% url 'unesco:site_list' region.id %}">Site</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+{% endblock %}
